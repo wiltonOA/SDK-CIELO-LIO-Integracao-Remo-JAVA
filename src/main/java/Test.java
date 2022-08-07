@@ -16,6 +16,10 @@ import java.util.logging.Logger;
 /**
  *
  * @author WILTON OLIVEIRA www.visaosoftware.com.br
+ * 
+ * Nessa classe configuramos o SDK com as credenciais de desenvolvedores criadas na Cielo (http://desenvolvedores.cielo.com.br/)
+ * Definimos o ambiente que vamos utilizar SANDBOX || PRODUÇÃO.
+ * Criamos um pedido e enviamos para API Order Manager que sera enviado para o terminal da LIO.
  */
 public class Test {
 
@@ -32,12 +36,15 @@ public class Test {
         //Retorna qual abiente ira utilizar.
         ConfigAPIcieloLio.tipoAmbiente();
 
+        //Criando um pedido.
         valorPedido = 25000;
         String pedidoJson = new setaDadosOrder().populaOrder("1010", "CONSUMIDOR", (int) valorPedido);
         
         try {
+            //Enviando pedito para API Order Manager da Cielo LIO.
             ResponseVO retornoJson = new ApiCieloLioController().postPedido(pedidoJson);
             
+            //Se tudo correu bem, imprime no console o ID do pedido criado.
             if (retornoJson.getStatus().equals(StatusCode.STATUS_201)) {
                 System.out.println("Pedido enviado para LIO com sucesso!");
                 System.out.println("ID do pedido: " + retornoJson.getId());
