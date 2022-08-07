@@ -13,4 +13,6 @@ Instale o CIELO-LIO-VISAO-1.0-SNAPSHOT.jar em seu projeto.
 - GET /orders/{id}/transactions
 - PUT /orders/{id}
 
-### [Manual da documenação no swagger do projeto aqui!](https://desenvolvedores.cielo.com.br/api-portal/pt-br/swagger/cielo-lio-order-manager-integrao-remota/1.0.0#/)
+### [Manual da documenação no swagger](https://desenvolvedores.cielo.com.br/api-portal/pt-br/swagger/cielo-lio-order-manager-integrao-remota/1.0.0#/)
+
+### [Manual da documenação da integração remota aqui!](https://developercielo.github.io/manual/cielo-lio#integra%C3%A7%C3%A3o-remota)
