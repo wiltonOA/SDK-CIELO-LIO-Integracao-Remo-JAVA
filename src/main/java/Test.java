@@ -23,7 +23,7 @@ public class Test {
         float valorPedido = (float) 4.5;
 
         //Se PRODUCAO for igual a TRUE ele vai usar a API de produção, por padrão
-        //essa variavel recebe FALSE.
+        //essa variavel recebe FALSE por padão.
         ConfigAPIcieloLio.PRODUCAO = false;
         //Setar suas crendenciais.
         ConfigAPIcieloLio.ClienteID = "SUA_CLIENTE_ID";
